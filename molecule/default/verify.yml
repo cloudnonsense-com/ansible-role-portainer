@@ -1,0 +1,34 @@
+---
+
+- name: Verify
+  hosts: all
+  gather_facts: False
+  roles:
+
+  tasks:
+    - name: Check app HTTP response
+      ansible.builtin.uri:
+        url: "http://host.docker.internal:9000" # the port needs to be dynamic
+        return_content: true
+      register: app_response
+
+    - name: Debug app response
+      ansible.builtin.debug:
+        var: app_response.content
+
+    - name: Verify app status code
+      ansible.builtin.assert:
+        that:
+          - app_response.status == 200
+        fail_msg: "app did not return HTTP 200 OK"
+        success_msg: "app returned HTTP 200 OK"
+
+    - name: Verify app content
+      ansible.builtin.assert:
+        that:
+          # - '"ansible role" in app_response.content'
+          - app_response.content is search('portainer') # <-- STRING TEST HERE!
+        fail_msg: "app content verification failed! Expected string not found."
+        success_msg: "app is serving the expected content."
+
+...

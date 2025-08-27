@@ -1,0 +1,10 @@
+---
+- name: Cleanup
+  hosts: all
+  gather_facts: True
+
+  roles:
+    - role: cloudnonsense.portainer
+      vars:
+        portainer_state: absent
+...

@@ -1,0 +1,14 @@
+---
+# defaults file for ansible-role-portainer
+# portainers_base_dir:  "/opt/apps"
+portainer_state:      "present"
+# portainer_file_owner: "root"
+# portainer_file_mode:  "0644"
+# portainer_dir_mode:   "0755"
+
+portainer_stackname: portainer
+# portainer_http_host:  ""    # demo value: "nginx-demo.example.lan"
+
+portainer_src_file: portainer_compose.yml.j2
+# portainer_dst_dir:  "{{ portainers_base_dir }}/{{ portainer_name }}"
+...

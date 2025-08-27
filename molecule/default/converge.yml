@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: True
+  roles:
+
+    - role: cloudnonsense.portainer
+      # vars:
+      #   portainer_stackname: "portainer"
+      #   portainer_var1: "asd"
+...

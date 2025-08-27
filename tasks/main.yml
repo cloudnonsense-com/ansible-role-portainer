@@ -1,0 +1,9 @@
+---
+# tasks file for ansible-role-portainer
+- include_role: 
+    name: cloudnonsense.compose_stack
+  vars:
+    compose_stack_name:     "{{ portainer_stackname }}"
+    compose_stack_src_file: "{{ portainer_src_file }}"
+    compose_stack_state:    "{{ portainer_state }}"
+...
