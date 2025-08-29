@@ -3,7 +3,8 @@
 - include_role: 
     name: cloudnonsense.compose_stack
   vars:
-    compose_stack_name:     "{{ portainer_stackname }}"
-    compose_stack_src_file: "{{ portainer_src_file }}"
-    compose_stack_state:    "{{ portainer_state }}"
+    compose_stack_name:                      "{{ portainer_stackname }}"
+    compose_stack_src_file:                  "{{ portainer_src_file }}"
+    compose_stack_state:                     "{{ portainer_state }}"
+    compose_stack_remove_volumes_on_destroy: "{{ portainer_remove_volumes_on_destroy }}"
 ...

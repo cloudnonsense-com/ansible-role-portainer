@@ -11,4 +11,6 @@ portainer_stackname: portainer
 
 portainer_src_file: portainer_compose.yml.j2
 # portainer_dst_dir:  "{{ portainers_base_dir }}/{{ portainer_name }}"
+
+portainer_remove_volumes_on_destroy: true
 ...
