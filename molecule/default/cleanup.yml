@@ -1,4 +1,5 @@
 ---
+
 - name: Cleanup
   hosts: all
   gather_facts: True
@@ -13,4 +14,5 @@
       ansible.builtin.command: docker volume prune -f
       changed_when: "'Total reclaimed space' in prune_result.stdout"
       register: prune_result
+
 ...

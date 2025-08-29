@@ -7,4 +7,5 @@
     compose_stack_src_file:                  "{{ portainer_src_file }}"
     compose_stack_state:                     "{{ portainer_state }}"
     compose_stack_remove_volumes_on_destroy: "{{ portainer_remove_volumes_on_destroy }}"
+    compose_stack_remove_images_on_destroy:  "{{ portainer_remove_images_on_destroy }}"
 ...

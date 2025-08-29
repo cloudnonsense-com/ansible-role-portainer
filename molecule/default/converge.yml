@@ -5,7 +5,4 @@
   roles:
 
     - role: cloudnonsense.portainer
-      # vars:
-      #   portainer_stackname: "portainer"
-      #   portainer_var1: "asd"
 ...
