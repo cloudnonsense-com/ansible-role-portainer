@@ -3,9 +3,12 @@
 - include_role: 
     name: cloudnonsense.compose_stack
   vars:
-    compose_stack_name:                      "{{ portainer_stackname }}"
-    compose_stack_src_file:                  "{{ portainer_src_file }}"
-    compose_stack_state:                     "{{ portainer_state }}"
-    compose_stack_remove_volumes_on_destroy: "{{ portainer_remove_volumes_on_destroy }}"
-    compose_stack_remove_images_on_destroy:  "{{ portainer_remove_images_on_destroy }}"
+    compose_stack_name:                       "{{ portainer_stackname }}"
+    compose_stack_src_file:                   "{{ portainer_src_file }}"
+    compose_stack_state:                      "{{ portainer_state }}"
+    compose_stack_remove_volumes_on_destroy:  "{{ portainer_remove_volumes_on_destroy }}"
+    compose_stack_remove_images_on_destroy:   "{{ portainer_remove_images_on_destroy }}"
+    compose_stack_manage_networks:            "{{ portainer_manage_networks }}"
+    compose_stack_networks:                   "{{ portainer_networks }}"
+    compose_stack_remove_networks_on_destroy: "{{ portainer_remove_networks_on_destroy }}"
 ...

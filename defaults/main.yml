@@ -14,4 +14,9 @@ portainer_src_file: portainer_compose.yml.j2
 
 portainer_remove_volumes_on_destroy: true
 portainer_remove_images_on_destroy:  "local" # (all - removes the images|local)
+
+portainer_manage_networks: true
+portainer_networks:
+  - { name: "{{ portainer_stackname }}", driver: bridge }
+portainer_remove_networks_on_destroy: true
 ...
